@@ -200,6 +200,7 @@
             this.Controls.Add(this.cardSelect);
             this.Controls.Add(this.cardList);
             this.Controls.Add(this.cardName);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Name = "Form1";
             this.Text = "Form1";
             this.ResumeLayout(false);

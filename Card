@@ -1,0 +1,6 @@
+Code cleanliness, bug fixes, comments.
+- Added comments for code clarity
+- Removed excess code
+- Checked whether the cards list was not empty when accessing it. Should resolve crashes
+- Ensure the first digit in the ID is not a 3
+- Adjusted title of the window
