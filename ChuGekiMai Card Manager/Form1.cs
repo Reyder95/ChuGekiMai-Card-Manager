@@ -37,6 +37,7 @@ namespace ChuGekiMai_Card_Manager
             for (int i = 0; i < this.textBoxes.Length; i++)
             {
                 this.textBoxes[i].KeyDown += TextBox_KeyDown;
+                this.textBoxes[i].KeyPress += TextBox_KeyPress;
             }
 
             ReadCardsFromFile();
@@ -91,6 +92,14 @@ namespace ChuGekiMai_Card_Manager
             if (textBox3.Text.Length == 4)
             {
                 textBox5.Focus();
+            }
+        }
+
+        private void TextBox_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (!char.IsControl(e.KeyChar) && !char.IsDigit(e.KeyChar))
+            {
+                e.Handled = true;
             }
         }
 
